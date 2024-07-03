@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mijn eerste pagina</title>
+    <style>
+        span {
+            color:aquamarine;
+            background-color: gray;
+        }
+
+        .class1{
+            color: green;
+            font-size: 24px;
+        }
+        #table1 {
+            border: 5px dashed red;
+        }
+    </style>
+    <script>
+        var a = 12;  //number
+        var b = "tekst"; //string
+        var c = true; //boolean
+    </script>
+</head>
+<body>
+    
+    <span>Mijn eerste tekst</span>
+    <span>Mijn tweede tekst</span>
+
+    <p class="class1 class2">Mijn eerste paragraaf</p>
+    <p>Mijn tweede paragraaf</p>
+
+    <img style="border: 12px solid green;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRISHPEEL3n96f64APtt-bfSmsk84VfNDFoqQ&s">
+
+    <table id="table1">
+        <tr>
+            <td>Cell1</td>
+            <td>Cell2</td>
+        </tr>
+    </table>
+
+<input type="text" id="new-color">
+
+<button type="button" onclick="readColor();">
+    Change color
+</button>
+
+
+
+<script>
+    // dit is een function declaration
+    function changeBackgroundColor(newColor){
+        var table;
+        // Chaining
+        table = document.getElementById('table1');
+        table.style.backgroundColor= newColor;
+
+    }
+
+    function readColor(){
+        let color = document.getElementById("new-color").value;
+        changeBackgroundColor(color);
+    }
+
+
+</script>
+</body>
+</html>
